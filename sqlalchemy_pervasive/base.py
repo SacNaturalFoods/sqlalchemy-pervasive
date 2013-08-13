@@ -36,19 +36,24 @@ class PervasiveCompiler(SQLCompiler):
     Custom SQL statement compiler for Pervasive PSQL.
     """
 
-    # This logic was basically copied from the ``sqlalchemy-access`` dialect.
-
     def get_select_precolumns(self, select):
+        # This logic was copied from the ``sqlalchemy-access`` dialect.
         s = 'DISTINCT ' if select._distinct else ''
         if select._limit:
             s += 'TOP {0} '.format(select._limit)
         if select._offset:
             raise InvalidRequestError(
-                "Pervasive PSQL does not support TOP (limit) with an offset")
+                "Pervasive PSQL does not support limit with an offset")
         return s
 
     def limit_clause(self, select):
-        return ""
+        return ''
+
+    def visit_true(self, expr, **kw):
+        return '1'
+
+    def visit_false(self, expr, **kw):
+        return '0'
 
 
 class PervasiveDialect(DefaultDialect):
