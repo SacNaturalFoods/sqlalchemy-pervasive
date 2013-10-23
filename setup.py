@@ -72,7 +72,7 @@ setup(
     name = "sqlalchemy-pervasive",
     version = __version__,
     author = "Sacramento Natural Foods Co-op, Inc",
-    author_email = "it-group@sacfoodcoop.com",
+    author_email = "developer@sacfoodcoop.com",
     license = "GNU GPL v3",
     description = "SQLAlchemy Dialect for Pervasive PSQL",
     long_description = README + '\n\n' +  CHANGES,
