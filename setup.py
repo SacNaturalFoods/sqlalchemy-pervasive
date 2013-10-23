@@ -3,7 +3,7 @@
 ################################################################################
 #
 #  sqlalchemy-pervasive -- SQLAlchemy Dialect for Pervasive PSQL
-#  Copyright © 2013 Lance Edgar
+#  Copyright © 2013 Sacramento Natural Foods Co-op, Inc
 #
 #  This file is part of sqlalchemy-pervasive.
 #
@@ -71,8 +71,8 @@ requires = [
 setup(
     name = "sqlalchemy-pervasive",
     version = __version__,
-    author = "Lance Edgar",
-    author_email = "lance@edbob.org",
+    author = "Sacramento Natural Foods Co-op, Inc",
+    author_email = "it-group@sacfoodcoop.com",
     license = "GNU GPL v3",
     description = "SQLAlchemy Dialect for Pervasive PSQL",
     long_description = README + '\n\n' +  CHANGES,
@@ -90,7 +90,7 @@ setup(
         ],
 
     install_requires = requires,
-    packages = find_packages(),
+    packages = find_packages(exclude=['tests']),
     include_package_data = True,
 
     entry_points = """
