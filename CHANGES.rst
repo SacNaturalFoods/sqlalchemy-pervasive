@@ -1,4 +1,10 @@
 
+0.1.2
+-----
+
+* Misc. housekeeping.  Added manifest, transferred copyright, etc.
+
+
 0.1.1
 -----
 
