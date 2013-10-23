@@ -73,6 +73,7 @@ setup(
     version = __version__,
     author = "Sacramento Natural Foods Co-op, Inc",
     author_email = "developer@sacfoodcoop.com",
+    url = 'https://github.com/SacNaturalFoods/sqlalchemy-pervasive',
     license = "GNU GPL v3",
     description = "SQLAlchemy Dialect for Pervasive PSQL",
     long_description = README + '\n\n' +  CHANGES,
